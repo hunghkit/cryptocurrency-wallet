@@ -1,0 +1,23 @@
+{
+  "name": "cryptocurrency-wallet",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "backend/src/lib/index.js",
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "start": "cd ./backend && yarn start",
+    "server": "cd ./backend && yarn dev",
+    "build": "cd ./backend && yarn install && yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hunghkit/cryptocurrency-wallet.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/hunghkit/cryptocurrency-wallet/issues"
+  },
+  "homepage": "https://github.com/hunghkit/cryptocurrency-wallet#readme"
+}
