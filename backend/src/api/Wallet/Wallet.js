@@ -2,7 +2,6 @@ const schema = `
   type Wallet {
     currency: Currency
     address: String!
-    balance: Float
   }
 
   type Currency {

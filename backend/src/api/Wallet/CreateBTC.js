@@ -1,8 +1,8 @@
 import { createBTCWallet as createWallet } from '../../modules/User/handlers';
 
-const createBTCWallet = (_, args) => {
-  console.log('createBTCWallet:', args);
-  return createWallet('5efacb934bc2717f60355bb4');
+const createBTCWallet = (_, _args, context) => {
+  console.log('createBTCWallet:', context.user.id);
+  return createWallet(context.user.id);
 };
 
 const schema = `

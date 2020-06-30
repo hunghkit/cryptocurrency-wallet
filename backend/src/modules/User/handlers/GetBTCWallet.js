@@ -1,3 +1,3 @@
 import User from '../User';
 
-export const getBTCWallet = async (userId) => User.getBTCWallet(userId);
+export const getBTCWallet = (userId) => User.getBTCWallet(userId);

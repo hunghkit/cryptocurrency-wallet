@@ -10,9 +10,13 @@ import playground from 'graphql-playground-middleware-express';
 
 import schema from './schema';
 
+import isAuth from './Middleware/isAuth';
+
 const app = express();
 
 const PORT = process.env.PORT || 8080;
+
+app.use(isAuth);
 
 // Apollo Server
 const graphQLServer = new ApolloServer({
@@ -20,7 +24,7 @@ const graphQLServer = new ApolloServer({
   tracing: true,
   cacheControl: true,
   debug: process.env.NODE_ENV !== 'production',
-  context: (context) => context.req,
+  context: (context) => ({ user: context.req.user }),
   playground: false,
   introspection: true,
 });

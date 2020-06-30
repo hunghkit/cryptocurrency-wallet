@@ -1,8 +1,7 @@
 import { getBTCWallet as getWallet } from '../../modules/User/handlers';
 
-const getBTCWallet = (_, args) => {
-  console.log('getBTCWallet:', args);
-  return getWallet('5efacb934bc2717f60355bb4');
+const getBTCWallet = (_, _args, context) => {
+  return getWallet(context.user.id);
 };
 
 const schema = `
