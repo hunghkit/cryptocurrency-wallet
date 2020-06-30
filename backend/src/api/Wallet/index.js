@@ -1,18 +1,18 @@
 import Wallet from './Wallet';
 import GetBTC from './GetBTC';
-import CreateBTC from './CreateBTC';
-import GetBalance from './GetBalance';
+import Create from './Create';
+import Balance from './Balance';
 
 export const schema = [
   Wallet.schema,
-  CreateBTC.schema,
+  Create.schema,
   GetBTC.schema,
-  GetBalance.schema,
+  Balance.schema,
 ];
 
 export const resolvers = [
   Wallet.resolvers,
   GetBTC.resolvers,
-  CreateBTC.resolvers,
-  GetBalance.resolvers,
+  Create.resolvers,
+  Balance.resolvers,
 ];

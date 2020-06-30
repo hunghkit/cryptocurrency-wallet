@@ -19,6 +19,7 @@ const typeDefs = [
   require('./Auth').schema,
   require('./User').schema,
   require('./Wallet').schema,
+  require('./Transaction').schema,
 ].flat();
 
 const resolvers = [
@@ -38,6 +39,7 @@ const resolvers = [
   require('./Auth').resolvers,
   require('./User').resolvers,
   require('./Wallet').resolvers,
+  require('./Transaction').resolvers,
 ].flat();
 
 export default makeExecutableSchema({

@@ -2,6 +2,7 @@ const schema = `
   type Wallet {
     currency: Currency
     address: String!
+    network: String
   }
 
   type Currency {

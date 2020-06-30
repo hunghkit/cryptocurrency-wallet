@@ -19,7 +19,7 @@ export const createBTCWallet = async (userId) => {
     throw { message: `BTC wallet for user ${userId} existed` };
   }
 
-  const keyPair = bitcoin.ECPair.makeRandom();
+  const keyPair = bitcoin.ECPair.makeRandom({ network });
 
   const { address } = bitcoin.payments.p2pkh({
     pubkey: keyPair.publicKey,

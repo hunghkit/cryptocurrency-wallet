@@ -29,6 +29,7 @@
     "axios": "^0.19.2",
     "bcrypt": "^5.0.0",
     "bitcoinjs-lib": "^5.1.10",
+    "blockchain.info": "^2.12.1",
     "express": "^4.17.1",
     "graphql": "^15.1.0",
     "graphql-playground-middleware-express": "^1.7.18",
