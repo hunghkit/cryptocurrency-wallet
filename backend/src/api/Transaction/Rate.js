@@ -14,21 +14,14 @@ const fetRate = (currency) => {
   }
 };
 
-const exchangeRate = async (_, { currency }) => {
-  const rates = await fetRate(currency);
-  pubsub.publish(EXCHANGE_RATE, { exchangeRate: rates, currency });
-
-  if (global.intervalRate) {
-    clearInterval(global.intervalRate);
-  }
-
+['BTC'].forEach(async (currency) => {
   global.intervalRate = setInterval(async () => {
     const rates = await fetRate(currency);
     pubsub.publish(EXCHANGE_RATE, { exchangeRate: rates, currency });
-  }, 20 * 1000);
+  }, 60 * 1000);
+});
 
-  return rates;
-};
+const exchangeRate = (_, { currency }) => fetRate(currency);
 
 const schema = `
   extend type Query {

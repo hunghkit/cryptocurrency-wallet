@@ -1,5 +1,5 @@
 ## Cryptocurrency-wallet
-A basic BTC wallet based on (bitcoinjs-lib)[https://github.com/bitcoinjs/bitcoinjs-lib]
+A basic BTC wallet based on Nodejs and [bitcoinjs-lib](https://github.com/bitcoinjs/bitcoinjs-lib)
 
 ## Setup project
 

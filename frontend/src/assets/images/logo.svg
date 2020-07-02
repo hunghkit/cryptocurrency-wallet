@@ -1,0 +1,21 @@
+<svg width="707.1" height="200" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <polygon id="svg_1" points="0,150 0,50 86.6,0 173.2,50 173.2,150 86.6,200 " fill="#61DAFB"/>
+  <polygon id="svg_2" points="86.6,133.3 57.7,116.7 57.7,83.3 86.6,66.7 115.5,83.3 144.3,66.7 86.6,33.3 28.9,66.7 28.9,133.3  86.6,166.7 144.3,133.3 115.5,116.7 " fill="#FFFFFF"/>
+  <polygon id="svg_3" points="0,50 86.6,100 86.6,0 " stroke-miterlimit="10" stroke="#FFFFFF" opacity="0.04"/>
+  <polygon id="svg_4" points="0,150 86.6,200 86.6,100 " stroke-miterlimit="10" stroke="#FFFFFF" opacity="0.04"/>
+  <polygon id="svg_5" points="86.6,100 173.2,150 173.2,50  " stroke-miterlimit="10" stroke="#FFFFFF" opacity="0.08"/>
+  <polygon id="svg_6" points="86.6,100 0,50 0,150 " fill-opacity="0"/>
+  <polygon id="svg_7" points="173.2,150 86.6,100 86.6,200  " stroke-miterlimit="10" stroke="#FFFFFF" opacity="0.08"/>
+  <polygon id="svg_8" points="173.2,50 86.6,0 86.6,100 " stroke-miterlimit="10" stroke="#FFFFFF" opacity="0.08"/>
+  <g id="svg_9">
+   <text font-weight="bold" stroke="null" transform="matrix(5.249298269034909,0,0,5.8000001907348615,-949.7786294163327,-80.77500332891937) " xml:space="preserve" text-anchor="start" font-family="'Trebuchet MS', Gadget, sans-serif" font-size="24" id="svg_21" y="39.453125" x="220.049988" stroke-opacity="null" stroke-width="0" fill="#333333">BITCOIN</text>
+  </g>
+ </g>
+</svg>

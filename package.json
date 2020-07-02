@@ -9,6 +9,8 @@
   "scripts": {
     "start": "cd ./backend && yarn start",
     "server": "cd ./backend && yarn dev",
+    "dev": "cd ./frontend && yarn start",
+    "prebuild": "cd ./frontend && yarn install && yarn build",
     "build": "cd ./backend && yarn install && yarn build"
   },
   "repository": {

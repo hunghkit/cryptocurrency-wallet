@@ -1,8 +1,11 @@
+import { createUsingNetwork } from '../../services/btc';
+
 const schema = `
   type Wallet {
     currency: Currency
     address: String!
     network: String
+    href: String
   }
 
   type Currency {
@@ -15,7 +18,14 @@ const schema = `
   }
 `;
 
-const resolvers = {};
+const resolvers = {
+  Wallet: {
+    href: (wallet) => {
+      const api = createUsingNetwork(wallet);
+      return `${api.detail}/address/${wallet.address}`;
+    },
+  },
+};
 
 export default {
   schema,

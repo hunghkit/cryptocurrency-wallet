@@ -19,8 +19,6 @@ export const createBTCTransaction = async (id, input) => {
     throw new Error('Out of balance');
   }
 
-  console.log('tx:', tx);
-
   const hex = await api.getTransaction(tx.txid, 'hex');
 
   const inputData = {
@@ -42,11 +40,13 @@ export const createBTCTransaction = async (id, input) => {
   psbt.finalizeAllInputs();
 
   const newHex = psbt.extractTransaction().toHex();
-  const txid = await api.pushTransaction(newHex);
-
-  console.log('txid:', txid);
-
-  return {
-    txid,
-  };
+  try {
+    const txid = await api.pushTransaction(newHex);
+    return {
+      txid,
+      href: `${api.detail}/tx/${txid}`,
+    };
+  } catch (e) {
+    throw e.response.data;
+  }
 };

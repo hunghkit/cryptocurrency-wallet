@@ -1,0 +1,47 @@
+// cssnano produces improper output in postcss-normalize-positions
+// clean-css
+// this is a temp fix to avoid the issue where
+// input:
+// background-position: center right $input-height-inner-quarter;
+// produces output:
+// background-position: 100% $input-height-inner-quarter;
+
+.was-validated .form-control:valid,
+.form-control.is-valid {
+  background-position: right $input-height-inner-quarter center;
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+  background-position: right $input-height-inner-quarter center;
+}
+
+.input-group.is-invalid {
+  input, .input-group-text {
+    border-color: #f86c6b;
+  }
+
+  ~ .invalid-feedback {
+    display: block;
+  }
+}
+
+.form-group.is-invalid {
+  .invalid-feedback {
+    display: block;
+  }
+}
+
+.divider {
+  height: 0;
+  margin: 2rem 0;
+  overflow: hidden;
+  border-top: 1px solid #e4e7ea;
+}
+
+.sk-fading-circle .sk-circle {
+  margin: 0 auto;
+}
+.sk-three-bounce {
+  height: 40px;
+}

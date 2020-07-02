@@ -13,18 +13,19 @@ const schema = `
     vin_sz: Int
     vout_sz: Int
     result: Float
-    out: [TransactionBlockInput]
+    out: [TransactionBlockOut]
     inputs: [TransactionBlockInput]
+    href: String
   }
 
   type TransactionBlockInput {
     sequence: Int
     witness: String!
-    prev_out: TransactionBlockInputPrevious
+    prev_out: TransactionBlockOut
     script: String!
   }
 
-  type TransactionBlockInputPrevious {
+  type TransactionBlockOut {
     spent: Boolean
     tx_index: Int
     type: Int
